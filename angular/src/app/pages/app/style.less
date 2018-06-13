@@ -1,0 +1,211 @@
+@import "less/index.less";
+
+body {
+    font-family: 'Roboto', sans-serif;
+
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+        list-style: none;
+    }
+}
+a {
+    color: #0275d8;
+
+    &:hover,
+    &:visited,
+    &:focus {
+        text-decoration: none;
+    }
+}
+label {
+    color: #4a4a4a;
+    font-size: 11px;
+    font-weight: 700;
+}
+.flexWrapper {
+    .flex-display();
+    .flex-direction(row);
+}
+.icon {
+    width: 17px;
+    height: 17px;
+    margin: 10px;
+}
+.generate-default(@n, @i: 0) when (@i =< @n) {
+    .mt-@{i} {
+        margin-top: ~"@{i}px !important";
+    }
+    .mb-@{i} {
+        margin-bottom: ~"@{i}px !important";
+    }
+    .mr-@{i} {
+        margin-right: ~"@{i}px !important";
+    }
+    .ml-@{i} {
+        margin-left: ~"@{i}px !important";
+    }
+    .w-@{i} {
+        width: ~"@{i}px !important";
+    }
+    .generate-default(@n, (@i + 5));
+}
+.generate-default(100);
+.btn-rc-primary {
+    background: #0275D8;
+    border-color: #0275D8;
+    color: #FFF;
+    
+    &:hover,
+    &:focus {
+        color: #FFF;
+    }
+}
+.btn-rc-default {
+    background: transparent;
+    border-color: #000;
+    color: #000;
+
+    &:hover,
+    &:focus {
+        color: #000;
+    }
+}
+.btn-primary-reverse {
+    background: transparent;
+    border-color: #0275D8;
+    color: #0275D8;
+
+    &:hover,
+    &:focus {
+        color: #0275D8;
+    }
+}
+.btn-danger-reverse {
+    background: transparent;
+    border-color: #d9534f;
+    color: #d9534f;
+
+    &:hover,
+    &:focus {
+        color: #d9534f;
+    }
+}
+.btn-warning-reverse {
+    background: transparent;
+    border-color: #ec971f;
+    color: #ec971f;
+
+    &:hover {
+        color: #ec971f;
+    }
+}
+
+.customTable {
+    margin-top: 20px;
+    margin-bottom: 0px;
+
+    > thead > tr > th {
+        border: none;
+        position: relative;
+        color: #4a4a4a;
+        font-size: 11px;
+        font-weight: 700;
+        line-height: 11px;
+
+        &.sortable {
+            cursor: pointer;
+            &:after {
+                content: "\f107";
+                font-family: FontAwesome;
+                margin-left: 15px;
+                font-size: 16px;
+            }
+            &.asc {
+                &:after {
+                    content: "\f106";
+                }
+            }
+        }
+    }
+    > tbody > tr > td {
+        background: #F1F1F1;
+        border-top: 8px solid #FFF;
+        border-bottom: 8px solid #FFF;
+        vertical-align: middle;
+        color: #4a4a4a;
+
+        &:first-child {
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+        }
+        &:last-child {
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+        }
+        
+        .btn-link {
+            text-decoration: none;
+        }
+    }
+}
+.popup-wrap {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    .popup-overlay-bg {
+        z-index: 4001;
+        background: #000;
+        width: 100%;
+        height: 100%;
+        opacity: 0.5;
+        position: absolute;
+    }
+    .popup {
+        z-index: 4002;
+        position: absolute;
+        width: 500px;
+        margin-left: 50%;
+        top: 50%;
+        background: #FFF;
+        border: 1px solid #b7bbc0;
+        padding: 45px;
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        -moz-transform: translateX(-50%) translateY(-50%);
+        -ms-transform: translateX(-50%) translateY(-50%);
+        -o-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+    }
+}
+.table {
+    tbody {
+        tr {
+            &:nth-child(odd) {
+                background: #EEE;
+            }
+            td {
+                &.positive {
+                    color: #4CAF50;
+                }
+                &.negative {
+                    color: #d9534f;
+                }
+                .fa-remove {
+                    cursor: pointer;
+                    color: #d9534f;
+                }
+            }
+            
+            &.highlight {
+                background: rgba(0, 255, 0, 0.1)
+            }
+        }
+    }
+}

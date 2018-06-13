@@ -1,0 +1,11 @@
+@font-face {
+	font-family: FontAwesome;
+	src: url('fontawesome-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Helvetica Neue";
+	font-style: normal;
+	src: url('helveticaneue.woff') format('woff');
+}

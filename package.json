@@ -1,0 +1,13 @@
+{
+  "name": "Socket",
+  "version": "1.0.0",
+  "description": "Socket",
+  "dependencies": {
+    "express": "^3.2.6",
+    "mailgun-js": "^0.10.1",
+    "mongoose": "^4.10.0",
+    "request": "^2.81.0",
+    "socket.io": "^2.0.1"
+  },
+  "author": "Nhon Lai"
+}

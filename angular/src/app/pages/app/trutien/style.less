@@ -1,0 +1,43 @@
+body {
+    background: url('/img/bg.jpg') no-repeat left top;
+}
+#main {
+    md-sidenav {
+        height: 100vh;
+
+        md-toolbar {
+            background: transparent;
+        }
+        md-list-item {
+            &.active {
+                background: #4080FF;
+            }
+        }
+    }
+    .content1,
+    .content3 {
+        overflow: hidden;
+        margin: 20px;
+        background: transparent;
+    }
+    .content2 {
+        overflow: hidden;
+        margin: 20px;
+        background: transparent;
+
+        md-input-container {
+            width: 100%;
+        }
+    }
+    .content3 {
+        md-select {
+            margin: 0;
+        }
+    }
+    .side-footer {
+        position: absolute;
+        bottom: 10px;
+        width: 100%;
+        text-align: center;
+    }
+}

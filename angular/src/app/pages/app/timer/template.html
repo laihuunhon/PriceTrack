@@ -1,0 +1,31 @@
+<div class="container" id="timer">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h2>Time Track</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="panel panel-success">
+                <div class="panel-body">
+                    <div class="table-responsive">
+                        <form ng-repeat="item in ctrl.data" name="{{'form' + $index}}">
+                            <table class="table">
+                                <tr>
+                                    <td width="200">{{item.map}}</td>
+                                    <td class="inputBox">
+                                        <input class="form-control" type="number" ng-model="item.minutes" />
+                                        <input class="form-control" type="number" ng-model="item.seconds" />
+                                    </td>
+                                    <td><button type="submit" class="btn btn-primary" ng-click="ctrl.doApply(item)">Apply</button></td>
+                                    <td>{{item.realMinutes}} : {{item.realSeconds}}</td>
+                                    <td><button class="btn btn-danger" ng-click="ctrl.doReset(item)">Reset</button></td>
+                                </tr>
+                            </table>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
