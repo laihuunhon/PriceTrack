@@ -1,5 +1,3 @@
-const api_key = 'key-a0bda20ef6a2e4573798d289d793032a'
-const domain = 'sandboxb29ac985354f4cfdad103aefe1c60173.mailgun.org'
 const mailgun = require('mailgun-js')({
   apiKey: api_key,
   domain: domain
